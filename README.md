@@ -1,23 +1,3 @@
-# Scripts Python para manipulação de dados no MongoDB
-Neste repositório, são disponibilizados alguns scripts em Python que utilizam a biblioteca pymongo para manipular dados em um banco de dados MongoDB.
-
-### Pré-requisitos
-Para executar os scripts, é necessário ter o Python 3 e a biblioteca pymongo instalados em sua máquina. Além disso, é preciso ter um servidor MongoDB em execução, seja localmente ou em algum serviço de nuvem.
-
-## Script 1: insert_random.py
-Este script realiza inserções aleatórias na coleção "customers" do banco de dados "mydatabase". Para cada inserção, um nome aleatório de 10 letras e um endereço aleatório de 20 caracteres alfanuméricos são gerados. O número de inserções a serem realizadas é definido no início do script.
-
-## Script 2: delete_random.py
-Este script realiza exclusões aleatórias na coleção "customers" do banco de dados "mydatabase". O número de exclusões a serem realizadas é definido aleatoriamente entre 30 e 10000. Para cada exclusão, é escolhido aleatoriamente um documento na coleção e ele é removido.
-
-## Script 3: update_random.py
-Este script realiza atualizações aleatórias na coleção "customers" do banco de dados "mydatabase". O número de atualizações a serem realizadas é definido aleatoriamente entre 30 e 100. Para cada atualização, é escolhido aleatoriamente um documento na coleção e o seu endereço é atualizado para um valor aleatório de 20 caracteres alfanuméricos.
-
-### Como executar
-Para executar cada um dos scripts, basta abrir o terminal, navegar até o diretório onde os scripts estão localizados e rodar o comando python <nome_do_script>.py. Certifique-se de ter definido corretamente as informações de conexão ao servidor MongoDB no início de cada script.
-
----
-
 # Python Scripts for Data Manipulation in MongoDB
 In this repository, some Python scripts are available that use the pymongo library to manipulate data in a MongoDB database.
 
