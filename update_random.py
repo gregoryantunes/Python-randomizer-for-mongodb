@@ -6,14 +6,13 @@ myclient = pymongo.MongoClient("mongodb://localhost:27017/")
 mydb = myclient["mydatabase"]
 mycol = mydb["customers"]
 
-num_updates = random.randint(30, 100) # Escolhe aleatoriamente o número de updates a serem realizados
+num_updates = random.randint(30, 100) # Randomly chooses the number of updates to be performed
 
 for i in range(num_updates):
-    name = ''.join(random.choice(string.ascii_letters) for i in range(10)) # Gera um nome aleatório de 10 letras
-    address = ''.join(random.choice(string.ascii_letters + string.digits) for i in range(20)) # Gera um endereço aleatório de 20 caracteres alfanuméricos
-    filter = {"name": name} # Cria um filtro para encontrar um documento com o nome gerado aleatoriamente
-    update = {"$set": {"address": address}} # Cria um update para alterar o endereço do documento encontrado
-    mycol.update_one(filter, update) # Atualiza o documento na coleção
+    name = ''.join(random.choice(string.ascii_letters) for i in range(10)) # Generates a random name with 10 letters
+    address = ''.join(random.choice(string.ascii_letters + string.digits) for i in range(20)) # Generates a random address with 20 alphanumeric characters
+    filter = {"name": name} # Creates a filter to find a document with the randomly generated name
+    update = {"$set": {"address": address}} # Creates an update to change the address of the found document
+    mycol.update_one(filter, update) # Updates the document in the collection
 
-print(f"{num_updates} documentos foram atualizados na coleção.")
-
+print(f"{num_updates} documents were updated in the collection.")
